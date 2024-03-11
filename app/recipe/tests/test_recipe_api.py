@@ -432,7 +432,7 @@ class PrivateRecipeAPITests(TestCase):
         self.assertEqual(res.status_code, status.HTTP_200_OK)
         self.assertEqual(len(res.data), 2)
         s1 = RecipeSerializer(r1)
-        s2 = RecipeSerializer(r3)
+        s2 = RecipeSerializer(r2)
         s3 = RecipeSerializer(r3)
         self.assertIn(s1.data, res.data)
         self.assertIn(s2.data, res.data)
